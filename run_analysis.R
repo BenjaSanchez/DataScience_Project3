@@ -52,7 +52,7 @@ all_data <- arrange(all_data,Activity)
 group_data <- group_by(all_data,Activity,Subject)
 tidy_data  <- summarise_each(group_data,funs(mean))
 
-#Save results:
+#Finally, save results:
 write.table(tidy_data,'tidy_data.txt',sep = '\t', row.name = FALSE)
 
 ################################################################################
