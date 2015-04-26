@@ -2,9 +2,9 @@
 
 This repo includes all files developed for completing the programming assignment of the on-line course "Getting & Cleaning Data" in Coursera:
 
-* _tidy_data.txt_: Contains the requested tidy data set.
+* _tidy_data.txt_: Contains the requested tidy data set. PLEASE NOTE: For loading the data set in R please use _data <- read.table('tidy_data.txt', header = TRUE)_
 * _UCI HAR Dataset_: Folder with all original data.
-* _run_analysis.R_: Performs all the necessary coding for obtaining the tidy data set from the original data. It performs the following steps:
+* _run_analysis.R_: Performs all necessary steps for obtaining the tidy data set from the original data:
     * Loads all original data from the _UCI HAR Dataset_ folder.
     * Merges both the training and test sets to create one data set.
     * Filters only the mean and standard deviation measurements from all the data.

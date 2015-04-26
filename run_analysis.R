@@ -38,8 +38,6 @@ all_data <- cbind(act_names,factor(sub_num[,1]),all_data)
 
 #Create descriptive variable names:
 var_names <- c('Activity','Subject',var_names)
-var_names <- gsub('()','',var_names,fixed=TRUE)
-var_names <- gsub('-','_',var_names,fixed=TRUE)
 
 #Assign names to all variables from the dataset:
 colnames(all_data) <- var_names
