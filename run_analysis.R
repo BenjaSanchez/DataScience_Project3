@@ -1,8 +1,7 @@
 ################################################################################
 ## run_analysis.R
 ## 
-##
-## Benjamín J. Sánchez. Last Update: 2015-04-24
+## Benjamín J. Sánchez. Last Update: 2015-04-26
 ################################################################################
 
 #Load dplyr package:
@@ -23,7 +22,7 @@ all_data <- rbind(train_data,test_data)
 act_num  <- rbind(train_act_num,test_act_num)
 sub_num  <- rbind(train_sub_num,test_sub_num)
 
-#Extract only the mean and standard deviation measurements:
+#Extract only the mean and standard deviation values:
 ind_mean  <- grep('-mean()',var_names[,2],fixed=TRUE)
 ind_std   <- grep('-std()',var_names[,2],fixed=TRUE)
 index     <- sort(c(ind_mean,ind_std))
@@ -38,6 +37,9 @@ all_data <- cbind(act_names,factor(sub_num[,1]),all_data)
 
 #Create descriptive variable names:
 var_names <- c('Activity','Subject',var_names)
+var_names <- gsub('()','',var_names,fixed=TRUE)
+var_names <- gsub('-','_',var_names,fixed=TRUE)
+var_names <- gsub('BodyBody','Body',var_names,fixed=TRUE)
 
 #Assign names to all variables from the dataset:
 colnames(all_data) <- var_names
