@@ -5,7 +5,7 @@ README
 
 This repo includes all files developed for completing the programming assignment of the on-line course "Getting & Cleaning Data" in Coursera:
 
-* _tidy_data.txt_: Contains the requested tidy data set. PLEASE NOTE: For loading the data set in R please use _data <- read.table('tidy_data.txt', header = TRUE)_
+* _tidy_data.txt_: Contains the requested tidy data set. NOTE: For loading the data set in R please use _data <- read.table('tidy_data.txt', header = TRUE)_
 * _UCI HAR Dataset_: Folder with all original data.
 * _run_analysis.R_: Performs all necessary steps for obtaining the tidy data set from the original data:
     * Loads all original data from the _UCI HAR Dataset_ folder.
@@ -17,7 +17,7 @@ This repo includes all files developed for completing the programming assignment
     * Sorts the dataset by activity name and then by subject.
     * Creates a tidy data set with the average of each variable for each activity and each subject.
     * Finally, saves the results as _tidy_data.txt_.
-* _CodeBook.md_: Contains a description of all variables, the data, and the transformations that were performed to clean up the data.
+* _CodeBook.md_: Contains a description of the data, all variables and the transformations that were performed to clean up the data.
 * _write_CodeBook.R_: Reads the variable names from _tiny_data.txt_ and creates and automatic description of each variable, for easily generating the "Description of each variable" section in _CodeBook.md_.
 
 Benjamín Sánchez. Last edited: 2015-04-26
